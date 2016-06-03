@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<h1>Das Editorfenster</h1>
+<div>
+    <img class="float-right" width="1000" src="./images/editor.png">
+    <p>
+        Dies ist der Hauptarbeitsbereich der Anwendung. Es lassen sich
+        bestehende Punkte löschen und verschieben sowie neue Punkte hinzufügen.
+        Dabei wanderen die Hüllen um die Punktmenge stets mit. Die Punkte, die
+        auf der konvexen Hülle liegen, sind farbig markiert. Die Winkelhüllen
+        sind rot umrandet.
+    </p>
+    Das Editorfenster lässt sich in drei verschiedene Modi schalten:
+    <ul>
+        <li>
+            <p class="list-title">
+                Zeichnen
+            </p>
+            <p>
+                In diesem Modus bewirkt jeder Klick in das Editorfenster, dass ein neuer
+                Punkt an der gewählten Stelle erscheint.
+            </p>
+        </li>
+        <li>
+            <p class="list-title">
+                Bewegen
+            </p>
+            <p>
+                Dieser Modus aktiviert Drag-and-Drop auf dem Editorfenster, sodass bestehende
+                Punkte über das Fenster gezogen werden können. Die Hüllen wandern dabei mit,
+                jedoch wird die Bewegung erst nach Loslassen der Maustaste gespeichert. Ein Klick
+                auf Rückgängig im <a href="./help-edit-menu.html#edit-menu-undo">Bearbeiten-Menü</a> setzt
+                den Punkt dann auf den Ort zurück, wo die Maus gedrückt wurde
+            </p>
+        </li>
+        <li>
+            <p class="list-title">
+                Löschen
+            </p>
+            <p>
+                In diesem Modus wird jeder Punkt, der auf dem Editorfenster angeklickt wird, gelöscht.
+            </p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

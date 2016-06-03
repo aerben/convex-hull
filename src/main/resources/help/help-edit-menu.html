@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1>Das Bearbeiten-Menü</h1>
+      <div>
+        <img class="float-right" height="265" src="./images/edit-menu.png">
+        <ul>
+          <li>
+            <div id="edit-menu-undo">
+              <p class="list-title">Rückgängig</p>
+              <p>
+                Dieser Menüpunkt macht die letzte Aktion rückgängig, die sich auf die
+                Punkte im Editorfenster bezieht. Wurde also beispielsweise ein Punkt bewegt
+                oder gelöscht, so lässt sich dieser Vorgang wieder zurücksetzen.
+                Aktionen, die sich nicht auf dem Editorfenster abspielen, wie beispielsweise
+                das Speichern von Punktmengen, lassen sich auf diese Weise nicht rückgängig machen.
+              </p>
+              <p>
+                Der Menüpunkt ist deaktiviert, wenn noch keine Aktion durchgeführt wurde, die
+                rückgängig gemacht werden kann.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="edit-menu-redo">
+              <p class="list-title">Wiederherstellen</p>
+              <p>
+                Mit diesem Menüpunkt lässt sich die zuletzt <a href="#edit-menu-undo">rückgängig</a>
+                gemachte Aktion wiederholen. Dieser Menüpunkt ist nur verfügbar, wenn bereits
+                eine Aktion rückgängig gemacht wurde und seitdem keine weiteren Veränderungen
+                am Editorfenster vorgenommen wurden.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="edit-menu-add-random">
+              <p class="list-title">Zufällige Punkte hinzufügen</p>
+              <p>
+                Hiermit lassen sich zufällige Punkte auf das Editorfenster zeichnen.
+                Nach der Auswahl des Menüpunkts öffnet sich ein Auswahlmenü, in dem die
+                gewünschte Anzahl der zufällig hinzuzufügenden Punkte ausgewählt werden kann.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="edit-menu-delete-all">
+              <p class="list-title">Alle Punkte löschen</p>
+              <p>
+                Dieser Menüpunkt löscht alle Punkte, die sich aktuell im Editorfenster
+                befinden.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="edit-settings">
+              <p class="list-title">Einstellungen</p>
+              <p>
+                <img class="float-left" width="587" src="./images/settings.png">
+              </p>
+              <p>
+                Dieser Menüpunkt öffnet das Einstellungsfenster. Hier lassen sich die Winkel einstellen,
+                für die Winkelhüllen gezeichnet werden sollen. Außerdem lässt sich die Präzision des Zeichnens
+                der Hüllen einstellen. Der präzise Modus erzielt bessere Ergebnisse, ist aber deutlich langsamer.
+                Die angezeigten Winkel lassen sich für beide Modi getrennt einstellen.
+              </p>
+            </div>
+          </li>
+        </ul>
+    </div>
+</body>
+</html>

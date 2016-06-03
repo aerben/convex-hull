@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1>Das Datei-Menü</h1>
+        <img class="float-right" height="262" src="./images/file-menu.png">
+        <ul>
+          <li>
+            <div id="file-menu-new">
+              <p class="list-title">Neu</p>
+              <p>
+                Dieser Menüpunkt öffnet ein neues Anwendungsfenster. Es befinden sich
+              zu Beginn keine Punkte im neuen Fenster. Das alte Fenster bleibt dabei geöffnet.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="file-menu-load-replace">
+              <p class="list-title">Laden und ersetzen</p>
+              <p>
+                Mit diesem Menüpunkt lassen sich neue Punkte aus einer Datei einlesen. Dabei werden alle Punkte,
+                die aktuell im Editor angezeigt werden, durch die neuen Punkte ersetzt.
+                Nach dem Klick auf den Menüpunkt öffnet sich ein Dateiauswahldialog, in dem die gewünschte Datei
+                auszuwählen ist. Es kann jede beliebige Datei ausgewählt werden. Allerdings muss diese Datei
+                von der Anwendung lesbar sein - es sollte sich also um eine Datei handeln, die vorher mit dieser
+                Anwendung angelegt wurde.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="file-menu-load-add">
+              <p class="list-title">Laden und hinzufügen</p>
+              <p>
+                Dieser Menüpunkt funktioniert wie "<a href="#file-menu-load-replace">Laden und ersetzen</a>", allerdings
+                werden hier nicht alle Punkte im Editorfenster ersetzt. Die neuen Punkte werden zu den vorhandenen
+                hinzugefügt.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="file-menu-save">
+              <p class="list-title">Speichern</p>
+              <p>
+                Hiermit lassen sich die aktuell im Editorfenster angezeigten Punkte auf dem Dateisystem abspeichern.
+                Sollten die angezeigten Punkte aus einer Datei mit "<a href="#file-menu-load-replace">Laden und ersetzen</a>"
+                geladen worden sein, wird diese Datei sofort überschrieben. Ansonsten öffnet sich ein Dateiauswahl-Dialog,
+                in welchem der gewünschte Speicherort angegeben werden kann. Wird eine bereits vorhandene Datei ausgewählt,
+                so wird diese überschrieben!
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="file-menu-save-as">
+              <p class="list-title">Speichern unter</p>
+              <p>
+                Im Gegensatz zum Menüpunkt "<a href="#file-menu-save">Speichern</a>" wird hier immer ein neuer Speicherort
+                ausgewählt, an dem die Punktdatei angelegt werden soll.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="file-close">
+              <p class="list-title">Schließen</p>
+              <p>
+                Mit diesem Menüpunkt wird das Anwendungsfenster geschlossen. Handelt es sich um das letzte noch geöffnete Fenster,
+                so wird die Anwendung beendet. Alle nicht gespeicherten Änderungen im Fenster gehen dabei verloren!
+              </p>
+            </div>
+          </li>
+        </ul>
+</body>
+</html>

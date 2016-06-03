@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.web.WebView?>
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.cathive.convex.ui.HelpCtrl">
+	<top>
+		<ToolBar>
+			<Button text="%help.index" onAction="#index" />
+			<Button text="&lt;" onAction="#back" />
+			<Button text="&gt;" onAction="#forward" />
+		</ToolBar>
+	</top>
+	<center>
+		<WebView fx:id="webView" />
+	</center>
+</BorderPane>

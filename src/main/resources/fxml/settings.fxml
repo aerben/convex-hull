@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+		  fx:controller="com.cathive.convex.ui.SettingsCrtl" fx:id="gridPane">
+	<padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+	<hgap>20</hgap>
+	<vgap>10</vgap>
+</GridPane>

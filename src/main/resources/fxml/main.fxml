@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.cathive.convex.ui.EditModeHandler?>
+<?import com.cathive.convex.ui.RenderingPane?>
+<?import com.cathive.convex.ui.UndoRedoHandler?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cathive.convex.ui.RenderingSettings?>
+<!--suppress JavaFxUnresolvedFxIdReference -->
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:id="root"
+      fx:controller="com.cathive.convex.ui.MainCtrl">
+    <fx:define>
+        <ToggleGroup fx:id="toolbar"/>
+        <EditModeHandler fx:id="editModeHandler"/>
+        <UndoRedoHandler fx:id="undoRedoHandler"/>
+        <RenderingSettings fx:id="settings" />
+    </fx:define>
+
+    <MenuBar>
+        <Menu text="%menu.file">
+            <MenuItem text="%menu.file.new" onAction="#newWindow"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="%menu.file.loadReplace" onAction="#loadAndReplace"/>
+            <MenuItem text="%menu.file.loadAdd" onAction="#loadAndAdd"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="%menu.file.save" fx:id="saveMenuItem" onAction="#save"/>
+            <MenuItem text="%menu.file.saveAs" onAction="#saveAs"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="%menu.file.exit" onAction="#exit"/>
+        </Menu>
+        <Menu text="%menu.edit">
+            <MenuItem text="%menu.edit.undo" fx:id="undo" onAction="#undo"/>
+            <MenuItem text="%menu.edit.redo" fx:id="redo" onAction="#redo"/>
+            <SeparatorMenuItem/>
+            <Menu text="%menu.edit.addRandom">
+                <MenuItem text="+10" fx:id="random_10" onAction="#addRandomPoints"/>
+                <MenuItem text="+50" fx:id="random_50" onAction="#addRandomPoints"/>
+                <MenuItem text="+100" fx:id="random_100" onAction="#addRandomPoints"/>
+                <MenuItem text="+500" fx:id="random_500" onAction="#addRandomPoints"/>
+                <MenuItem text="+1000" fx:id="random_1000" onAction="#addRandomPoints"/>
+            </Menu>
+            <MenuItem text="%menu.edit.deleteAll" onAction="#deleteAllPoints"/>
+            <MenuItem text="%menu.edit.settings" onAction="#showSettings" />
+        </Menu>
+        <Menu text="%menu.help">
+            <MenuItem onAction="#showHelp" text="%menu.help"/>
+        </Menu>
+    </MenuBar>
+    <ToolBar>
+        <Label text="%toolbar.mode"/>
+        <ToggleButton text="%toolbar.mode.move" toggleGroup="$toolbar" onAction="#moveMode"/>
+        <ToggleButton text="%toolbar.mode.draw" toggleGroup="$toolbar" onAction="#drawMode"/>
+        <ToggleButton text="%toolbar.mode.delete" toggleGroup="$toolbar" onAction="#deleteMode"/>
+    </ToolBar>
+    <ScrollPane VBox.vgrow="ALWAYS" fitToHeight="true" fitToWidth="true" style="-fx-focus-color: transparent; -fx-faint-focus-color:transparent;">
+        <RenderingPane VBox.vgrow="ALWAYS" fx:id="renderingPane" style="-fx-focus-color: transparent; -fx-faint-focus-color:transparent;">
+            <editModeHandler>
+                <fx:reference source="editModeHandler"/>
+            </editModeHandler>
+            <undoRedoHandler>
+                <fx:reference source="undoRedoHandler"/>
+            </undoRedoHandler>
+            <settings>
+                <fx:reference source="settings"/>
+            </settings>
+        </RenderingPane>
+    </ScrollPane>
+</VBox>
